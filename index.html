@@ -1,14 +1,3 @@
-That error means exactly what it says: Google's security systems automatically scan for exposed API keys and instantly disable them to protect your account. Because those keys were pasted here in this chat (or elsewhere on the web), they were flagged as "leaked" and locked down with a 403 Permission Denied status.
-
-Furthermore, **hardcoding API keys directly into front-end HTML/JavaScript is a major security risk.** Anyone who right-clicks and views the source code of your page can steal your keys and use up your quota or rack up billing charges. 
-
-Since this is a standalone HTML file without a secure backend server, the standard and safe way to handle this is to allow the user to input their own API key and store it locally in their browser.
-
-I have updated the tool below. It removes the hardcoded keys and adds a secure API key input field. It saves the key to the user's `localStorage` so they only have to enter it once.
-
-Here is the corrected, secure version:
-
-```html
 <!DOCTYPE html>
 <html lang="en">
 <head>
